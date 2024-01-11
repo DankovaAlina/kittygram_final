@@ -14,7 +14,6 @@ services:
   backend:
     image: dankovaalina/kittygram_backend
     env_file: .env
-    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'
     volumes:
       - static:/backend_static
       - media:/cats/images/
