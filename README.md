@@ -1,26 +1,67 @@
-#  Как работать с репозиторием финального задания
+![deploy workflow]
+(https://github.com/DankovaAlina/kittygram_final/actions/workflows/main.yml/badge.svg)
 
-## Что нужно сделать
+# **Описание проекта**
 
-Настроить запуск проекта Kittygram в контейнерах и CI/CD с помощью GitHub Actions
+Cервис обмена фотографиями котиков.
+Сервис поддерживает добавление новых записей от лица пользователя с фотографией и описанием.
 
-## Как проверить работу с помощью автотестов
+Проект поддерживает развертку в Docker-контейнерах.
 
-В корне репозитория создайте файл tests.yml со следующим содержимым:
-```yaml
-repo_owner: ваш_логин_на_гитхабе
-kittygram_domain: полная ссылка (https://доменное_имя) на ваш проект Kittygram
-taski_domain: полная ссылка (https://доменное_имя) на ваш проект Taski
-dockerhub_username: ваш_логин_на_докерхабе
+# **Стек технологий**
+
+Python 3.9.6
+Django 3.2.3
+Django REST Framework 3.12.4
+
+# **Как запустить проект локально**
+
+### **Клонировать репозиторий и перейти в него в командной строке:**
+
+```
+git clone https://github.com/DankovaAlina/kittygram_final
+cd kittygram_final
 ```
 
-Скопируйте содержимое файла `.github/workflows/main.yml` в файл `kittygram_workflow.yml` в корневой директории проекта.
+### **Cоздать и активировать виртуальное окружение:**
 
-Для локального запуска тестов создайте виртуальное окружение, установите в него зависимости из backend/requirements.txt и запустите в корневой директории проекта `pytest`.
+```
+python3 -m venv env
+source env/bin/activate
+```
 
-## Чек-лист для проверки перед отправкой задания
+### **Установить зависимости из файла requirements.txt:**
 
-- Проект Taski доступен по доменному имени, указанному в `tests.yml`.
-- Проект Kittygram доступен по доменному имени, указанному в `tests.yml`.
-- Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
-- В корне проекта есть файл `kittygram_workflow.yml`.
+```
+python3 -m pip install --upgrade pip
+cd backend
+pip install -r requirements.txt
+```
+
+### **Выполнить миграции:**
+
+```
+python3 manage.py migrate
+```
+
+### **Запустить проект:**
+
+```
+python3 manage.py runserver
+```
+
+# **Структура файла .env**
+
+USE_POSTGRES - bool - флаг использования PostgreSQL или SQLite
+POSTGRES_USER - str - логин пользователя в PostgreSQL
+POSTGRES_PASSWORD - str - пароль пользователя в PostgreSQL
+POSTGRES_DB - str - название БД в PostgreSQL
+DB_HOST - str - название хоста в PostgreSQL
+DB_PORT - int - порт PostgreSQL
+SECRET_KEY - str - ключ шифрования
+DEBUG - bool - флаг использования режима отладки
+ALLOWED_HOSTS - str - разрешенные хосты с разделителем через запятую ('localhost,127.0.0.1')
+
+# **Автор**
+
+@DankovaAlina
