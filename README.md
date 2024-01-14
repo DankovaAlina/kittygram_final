@@ -9,9 +9,9 @@ Cервис обмена фотографиями котиков.
 
 # **Стек технологий**
 
-Python 3.9.6
-Django 3.2.3
-Django REST Framework 3.12.4
+- Python 3.9.6
+- Django 3.2.3
+- Django REST Framework 3.12.4
 
 # **Как запустить проект локально**
 
@@ -51,15 +51,15 @@ python3 manage.py runserver
 
 # **Структура файла .env**
 
-USE_POSTGRES - bool - флаг использования PostgreSQL или SQLite
-POSTGRES_USER - str - логин пользователя в PostgreSQL
-POSTGRES_PASSWORD - str - пароль пользователя в PostgreSQL
-POSTGRES_DB - str - название БД в PostgreSQL
-DB_HOST - str - название хоста в PostgreSQL
-DB_PORT - int - порт PostgreSQL
-SECRET_KEY - str - ключ шифрования
-DEBUG - bool - флаг использования режима отладки
-ALLOWED_HOSTS - str - разрешенные хосты с разделителем через запятую ('localhost,127.0.0.1')
+- USE_POSTGRES - bool - флаг использования PostgreSQL или SQLite
+- POSTGRES_USER - str - логин пользователя в PostgreSQL
+- POSTGRES_PASSWORD - str - пароль пользователя в PostgreSQL
+- POSTGRES_DB - str - название БД в PostgreSQL
+- DB_HOST - str - название хоста в PostgreSQL
+- DB_PORT - int - порт PostgreSQL
+- SECRET_KEY - str - ключ шифрования
+- DEBUG - bool - флаг использования режима отладки
+- ALLOWED_HOSTS - str - разрешенные хосты с разделителем через запятую ('localhost,127.0.0.1')
 
 # **Автор**
 
