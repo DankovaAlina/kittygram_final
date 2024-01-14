@@ -1,5 +1,4 @@
-![deploy workflow]
-(https://github.com/DankovaAlina/kittygram_final/actions/workflows/main.yml/badge.svg)
+[![Main Kittygram workflow](https://github.com/DankovaAlina/kittygram_final/actions/workflows/main.yml/badge.svg)](https://github.com/DankovaAlina/kittygram_final/actions/workflows/main.yml)
 
 # **Описание проекта**
 
